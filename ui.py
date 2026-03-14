@@ -43,8 +43,7 @@ from processing import (
     read_input_file,
 )
 
-APP_UPDATE_URL = "https://github.com/your-username/your-repo/releases/latest"
-
+APP_UPDATE_URL = "https://github.com/ZoloKiala/desktop_safe/releases/latest/download/AQUASAFE_Setup_1.0.0.exe"
 
 def resource_path(relative_path: str) -> Path:
     if getattr(sys, "frozen", False) and hasattr(sys, "_MEIPASS"):

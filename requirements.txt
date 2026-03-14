@@ -1,0 +1,7 @@
+PyQt6
+pandas
+geopandas
+shapely
+openpyxl
+pyogrio
+fiona

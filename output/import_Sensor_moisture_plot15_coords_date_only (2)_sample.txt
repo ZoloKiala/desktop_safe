@@ -1,0 +1,1 @@
+South Africa	Hereford	_BC18		{\"type\":\"Point\",\"coordinates\":[29.41731,-25.167355]}

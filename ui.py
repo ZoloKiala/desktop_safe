@@ -1,9 +1,12 @@
+import json
 import shutil
 import sys
 from pathlib import Path
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
 
 import pandas as pd
-from PyQt6.QtCore import Qt, QUrl, QSize
+from PyQt6.QtCore import Qt, QTimer, QUrl, QSize
 from PyQt6.QtGui import QDesktopServices, QPixmap
 from PyQt6.QtWidgets import (
     QApplication,
@@ -45,7 +48,13 @@ from processing import (
     read_input_file,
 )
 
+CURRENT_VERSION = "1.0.1"
 APP_UPDATE_URL = "https://github.com/ZoloKiala/desktop_safe/releases/latest"
+GITHUB_OWNER = "ZoloKiala"
+GITHUB_REPO = "desktop_safe"
+GITHUB_LATEST_RELEASE_API = (
+    f"https://api.github.com/repos/{GITHUB_OWNER}/{GITHUB_REPO}/releases/latest"
+)
 
 
 def resource_path(relative_path: str) -> Path:
@@ -69,7 +78,7 @@ class CardFrame(QFrame):
 class GeospatialProcessingWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("AQUASAFE - Generic Geospatial Processing Tool")
+        self.setWindowTitle(f"AQUASAFE {CURRENT_VERSION} - Generic Geospatial Processing Tool")
 
         screen = QApplication.primaryScreen()
         if screen is not None:
@@ -88,10 +97,12 @@ class GeospatialProcessingWindow(QMainWindow):
         self.is_geo = False
         self.input_file: str | None = None
         self.result: dict | None = None
+        self.latest_release_url = APP_UPDATE_URL
 
         self._build_ui()
         self._apply_styles()
         self.scan_current_folder(initial=True)
+        QTimer.singleShot(1200, self.check_for_updates)
 
     def _build_ui(self):
         central = QWidget()
@@ -210,8 +221,14 @@ class GeospatialProcessingWindow(QMainWindow):
         body_layout.addWidget(toolbar_card)
 
         # =========================================================
-        # Success / status message
+        # Update / success banners
         # =========================================================
+        self.update_label = QLabel("")
+        self.update_label.setObjectName("updateLabel")
+        self.update_label.setWordWrap(True)
+        self.update_label.setVisible(False)
+        body_layout.addWidget(self.update_label)
+
         self.status_label = QLabel("")
         self.status_label.setObjectName("statusLabel")
         self.status_label.setWordWrap(True)
@@ -505,6 +522,15 @@ class GeospatialProcessingWindow(QMainWindow):
                 font-weight: 600;
             }
 
+            QLabel#updateLabel {
+                background: #fff4d6;
+                color: #8a6116;
+                border: 1px solid #f0d58a;
+                border-radius: 10px;
+                padding: 10px 12px;
+                font-weight: 600;
+            }
+
             QFrame#cardFrame {
                 background: #ffffff;
                 border: 1px solid #d8e0ea;
@@ -618,6 +644,52 @@ class GeospatialProcessingWindow(QMainWindow):
             """
         )
 
+    def normalize_version(self, version_text: str) -> tuple[int, ...]:
+        text = str(version_text).strip().lower().lstrip("v")
+        parts = []
+        for piece in text.split("."):
+            try:
+                parts.append(int(piece))
+            except ValueError:
+                parts.append(0)
+        return tuple(parts)
+
+    def check_for_updates(self):
+        try:
+            req = Request(
+                GITHUB_LATEST_RELEASE_API,
+                headers={
+                    "Accept": "application/vnd.github+json",
+                    "X-GitHub-Api-Version": "2022-11-28",
+                    "User-Agent": "AQUASAFE-Desktop",
+                },
+            )
+
+            with urlopen(req, timeout=8) as response:
+                data = json.loads(response.read().decode("utf-8"))
+
+            latest_tag = str(data.get("tag_name", "")).strip()
+            latest_url = str(data.get("html_url", APP_UPDATE_URL)).strip() or APP_UPDATE_URL
+
+            if latest_tag and self.normalize_version(latest_tag) > self.normalize_version(CURRENT_VERSION):
+                self.latest_release_url = latest_url
+                self.show_update_status(
+                    f"New version available: {latest_tag}. Click 'Download Latest Update' to install it."
+                )
+                self.update_btn.setText(f"Update Available ({latest_tag})")
+                self.update_btn.setToolTip(f"A newer release is available: {latest_tag}")
+            else:
+                self.latest_release_url = APP_UPDATE_URL
+                self.clear_update_status()
+                self.update_btn.setText("Download Latest Update")
+                self.update_btn.setToolTip("Open the latest release page")
+
+        except (URLError, HTTPError, TimeoutError, json.JSONDecodeError, OSError):
+            self.latest_release_url = APP_UPDATE_URL
+            self.clear_update_status()
+            self.update_btn.setText("Download Latest Update")
+            self.update_btn.setToolTip("Open the latest release page")
+
     def apply_responsive_layout(self):
         while self.settings_grid.count():
             self.settings_grid.takeAt(0)
@@ -651,6 +723,14 @@ class GeospatialProcessingWindow(QMainWindow):
     def show_success_status(self, message: str):
         self.status_label.setText(message)
         self.status_label.setVisible(True)
+
+    def clear_update_status(self):
+        self.update_label.clear()
+        self.update_label.setVisible(False)
+
+    def show_update_status(self, message: str):
+        self.update_label.setText(message)
+        self.update_label.setVisible(True)
 
     def log(self, text: str):
         self.log_output.append(text)
@@ -890,7 +970,7 @@ class GeospatialProcessingWindow(QMainWindow):
         QDesktopServices.openUrl(QUrl.fromLocalFile(str(OUTPUT_DIR.resolve())))
 
     def open_update_link(self):
-        QDesktopServices.openUrl(QUrl(APP_UPDATE_URL))
+        QDesktopServices.openUrl(QUrl(self.latest_release_url))
 
     def populate_preview_table(self, df: pd.DataFrame):
         self.preview_table.clear()

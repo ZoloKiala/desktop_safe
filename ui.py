@@ -1,12 +1,12 @@
 import shutil
-from pathlib import Path
 import sys
-
+from pathlib import Path
 
 import pandas as pd
 from PyQt6.QtCore import Qt, QUrl, QSize
 from PyQt6.QtGui import QDesktopServices, QPixmap
 from PyQt6.QtWidgets import (
+    QApplication,
     QCheckBox,
     QComboBox,
     QFileDialog,
@@ -15,11 +15,13 @@ from PyQt6.QtWidgets import (
     QGridLayout,
     QGroupBox,
     QHBoxLayout,
+    QHeaderView,
     QLabel,
     QLineEdit,
     QMainWindow,
     QMessageBox,
     QPushButton,
+    QScrollArea,
     QSizePolicy,
     QTableWidget,
     QTableWidgetItem,
@@ -43,7 +45,8 @@ from processing import (
     read_input_file,
 )
 
-APP_UPDATE_URL = "https://github.com/ZoloKiala/desktop_safe/releases/latest/download/AQUASAFE_Setup_1.0.0.exe"
+APP_UPDATE_URL = "https://github.com/ZoloKiala/desktop_safe/releases/latest"
+
 
 def resource_path(relative_path: str) -> Path:
     if getattr(sys, "frozen", False) and hasattr(sys, "_MEIPASS"):
@@ -51,6 +54,7 @@ def resource_path(relative_path: str) -> Path:
     else:
         base_path = Path(__file__).resolve().parent
     return base_path / relative_path
+
 
 APP_LOGO_PATH = resource_path("assets/aquasafe.png")
 
@@ -66,7 +70,18 @@ class GeospatialProcessingWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("AQUASAFE - Generic Geospatial Processing Tool")
-        self.resize(1500, 950)
+
+        screen = QApplication.primaryScreen()
+        if screen is not None:
+            available = screen.availableGeometry()
+            self.resize(
+                min(int(available.width() * 0.88), 1500),
+                min(int(available.height() * 0.88), 950),
+            )
+        else:
+            self.resize(1400, 900)
+
+        self.setMinimumSize(980, 700)
 
         self.candidate_files: list[str] = []
         self.data = None
@@ -126,15 +141,26 @@ class GeospatialProcessingWindow(QMainWindow):
         root_layout.addWidget(self.top_bar)
 
         # =========================================================
-        # Main content
+        # Scrollable main content
         # =========================================================
+        self.scroll_area = QScrollArea()
+        self.scroll_area.setWidgetResizable(True)
+        self.scroll_area.setFrameShape(QFrame.Shape.NoFrame)
+        self.scroll_area.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAsNeeded)
+        self.scroll_area.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAsNeeded)
+
         body = QWidget()
         body.setObjectName("bodyRoot")
         body_layout = QVBoxLayout(body)
         body_layout.setContentsMargins(26, 24, 26, 24)
         body_layout.setSpacing(16)
 
+        self.scroll_area.setWidget(body)
+        root_layout.addWidget(self.scroll_area)
+
+        # =========================================================
         # Hero card
+        # =========================================================
         hero_card = CardFrame()
         hero_layout = QVBoxLayout(hero_card)
         hero_layout.setContentsMargins(24, 18, 24, 18)
@@ -154,7 +180,9 @@ class GeospatialProcessingWindow(QMainWindow):
         hero_layout.addWidget(subtitle)
         body_layout.addWidget(hero_card)
 
+        # =========================================================
         # Toolbar card
+        # =========================================================
         toolbar_card = CardFrame()
         toolbar_layout = QHBoxLayout(toolbar_card)
         toolbar_layout.setContentsMargins(18, 14, 18, 14)
@@ -181,7 +209,18 @@ class GeospatialProcessingWindow(QMainWindow):
 
         body_layout.addWidget(toolbar_card)
 
+        # =========================================================
+        # Success / status message
+        # =========================================================
+        self.status_label = QLabel("")
+        self.status_label.setObjectName("statusLabel")
+        self.status_label.setWordWrap(True)
+        self.status_label.setVisible(False)
+        body_layout.addWidget(self.status_label)
+
+        # =========================================================
         # File selection card
+        # =========================================================
         file_card = CardFrame()
         file_layout = QVBoxLayout(file_card)
         file_layout.setContentsMargins(18, 14, 18, 14)
@@ -205,24 +244,29 @@ class GeospatialProcessingWindow(QMainWindow):
 
         body_layout.addWidget(file_card)
 
-        # Main settings grid
-        grid = QGridLayout()
-        grid.setHorizontalSpacing(18)
-        grid.setVerticalSpacing(18)
+        # =========================================================
+        # Responsive settings grid
+        # =========================================================
+        self.detected_group = self._build_detected_group()
+        self.export_group = self._build_export_group()
+        self.typed_group = self._build_typed_group()
+        self.options_group = self._build_options_group()
 
-        grid.addWidget(self._build_detected_group(), 0, 0)
-        grid.addWidget(self._build_export_group(), 0, 1)
-        grid.addWidget(self._build_typed_group(), 1, 0)
-        grid.addWidget(self._build_options_group(), 1, 1)
-
-        grid_wrap = CardFrame()
-        grid_wrap_layout = QVBoxLayout(grid_wrap)
+        self.grid_wrap = CardFrame()
+        grid_wrap_layout = QVBoxLayout(self.grid_wrap)
         grid_wrap_layout.setContentsMargins(18, 18, 18, 18)
-        grid_wrap_layout.addLayout(grid)
 
-        body_layout.addWidget(grid_wrap)
+        self.settings_grid = QGridLayout()
+        self.settings_grid.setHorizontalSpacing(18)
+        self.settings_grid.setVerticalSpacing(18)
+        grid_wrap_layout.addLayout(self.settings_grid)
 
+        body_layout.addWidget(self.grid_wrap)
+        self.apply_responsive_layout()
+
+        # =========================================================
         # Help card
+        # =========================================================
         help_card = CardFrame()
         help_layout = QVBoxLayout(help_card)
         help_layout.setContentsMargins(18, 14, 18, 14)
@@ -241,7 +285,9 @@ class GeospatialProcessingWindow(QMainWindow):
         help_layout.addWidget(help_label)
         body_layout.addWidget(help_card)
 
+        # =========================================================
         # Output card
+        # =========================================================
         output_card = CardFrame()
         output_layout = QVBoxLayout(output_card)
         output_layout.setContentsMargins(18, 18, 18, 18)
@@ -254,6 +300,10 @@ class GeospatialProcessingWindow(QMainWindow):
         self.log_output.setObjectName("logOutput")
         self.log_output.setReadOnly(True)
         self.log_output.setMinimumHeight(200)
+        self.log_output.setSizePolicy(
+            QSizePolicy.Policy.Expanding,
+            QSizePolicy.Policy.MinimumExpanding,
+        )
 
         preview_title = QLabel("Preview")
         preview_title.setObjectName("sectionTitle")
@@ -262,6 +312,13 @@ class GeospatialProcessingWindow(QMainWindow):
         self.preview_table.setObjectName("previewTable")
         self.preview_table.setAlternatingRowColors(True)
         self.preview_table.setMinimumHeight(260)
+        self.preview_table.setSizePolicy(
+            QSizePolicy.Policy.Expanding,
+            QSizePolicy.Policy.Expanding,
+        )
+        self.preview_table.verticalHeader().setVisible(False)
+        self.preview_table.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
+        self.preview_table.horizontalHeader().setStretchLastSection(True)
 
         output_layout.addWidget(log_title)
         output_layout.addWidget(self.log_output)
@@ -269,8 +326,6 @@ class GeospatialProcessingWindow(QMainWindow):
         output_layout.addWidget(self.preview_table)
 
         body_layout.addWidget(output_card, stretch=1)
-
-        root_layout.addWidget(body)
 
         self.add_files_btn.clicked.connect(self.add_files)
         self.scan_btn.clicked.connect(lambda: self.scan_current_folder(initial=False))
@@ -441,6 +496,15 @@ class GeospatialProcessingWindow(QMainWindow):
                 font-size: 13px;
             }
 
+            QLabel#statusLabel {
+                background: #e8f7ec;
+                color: #1f6b3b;
+                border: 1px solid #b7e4c7;
+                border-radius: 10px;
+                padding: 10px 12px;
+                font-weight: 600;
+            }
+
             QFrame#cardFrame {
                 background: #ffffff;
                 border: 1px solid #d8e0ea;
@@ -518,6 +582,11 @@ class GeospatialProcessingWindow(QMainWindow):
                 padding-right: 26px;
             }
 
+            QScrollArea {
+                border: none;
+                background: #f3f5f7;
+            }
+
             QTableWidget {
                 background: white;
                 border: 1px solid #d7deea;
@@ -548,6 +617,40 @@ class GeospatialProcessingWindow(QMainWindow):
             }
             """
         )
+
+    def apply_responsive_layout(self):
+        while self.settings_grid.count():
+            self.settings_grid.takeAt(0)
+
+        width = self.width()
+
+        if width < 1180:
+            self.settings_grid.addWidget(self.detected_group, 0, 0)
+            self.settings_grid.addWidget(self.export_group, 1, 0)
+            self.settings_grid.addWidget(self.typed_group, 2, 0)
+            self.settings_grid.addWidget(self.options_group, 3, 0)
+            self.settings_grid.setColumnStretch(0, 1)
+            self.settings_grid.setColumnStretch(1, 0)
+        else:
+            self.settings_grid.addWidget(self.detected_group, 0, 0)
+            self.settings_grid.addWidget(self.export_group, 0, 1)
+            self.settings_grid.addWidget(self.typed_group, 1, 0)
+            self.settings_grid.addWidget(self.options_group, 1, 1)
+            self.settings_grid.setColumnStretch(0, 1)
+            self.settings_grid.setColumnStretch(1, 1)
+
+    def resizeEvent(self, event):
+        super().resizeEvent(event)
+        if hasattr(self, "settings_grid"):
+            self.apply_responsive_layout()
+
+    def clear_status(self):
+        self.status_label.clear()
+        self.status_label.setVisible(False)
+
+    def show_success_status(self, message: str):
+        self.status_label.setText(message)
+        self.status_label.setVisible(True)
 
     def log(self, text: str):
         self.log_output.append(text)
@@ -584,6 +687,7 @@ class GeospatialProcessingWindow(QMainWindow):
         self.candidate_files = sorted(set(self.candidate_files + valid))
         self.refresh_file_combo(select_file=guess_default_input_file(valid))
         self.log(f"Added {len(valid)} supported file(s).")
+        self.clear_status()
 
     def scan_current_folder(self, initial: bool):
         found = list_primary_input_files_from_folder(".")
@@ -595,6 +699,7 @@ class GeospatialProcessingWindow(QMainWindow):
                 self.log(f"Found {len(found)} supported file(s) in the current folder.")
             else:
                 self.log("No supported input files found in the current folder.")
+            self.clear_status()
 
     def refresh_file_combo(self, select_file: str | None = None):
         self.file_combo.blockSignals(True)
@@ -610,6 +715,7 @@ class GeospatialProcessingWindow(QMainWindow):
             self.save_zip_btn.setEnabled(False)
             self.file_info.setText("No supported input files loaded.")
             self.clear_preview()
+            self.clear_status()
             return
 
         target = select_file if select_file in self.candidate_files else self.candidate_files[0]
@@ -678,12 +784,14 @@ class GeospatialProcessingWindow(QMainWindow):
             self.refresh_dropdowns_for_current_file()
             self.clear_preview()
             self.log_output.clear()
+            self.clear_status()
             self.log(f"Loaded: {file_path}")
         except Exception as e:
             self.handle_error("Failed to load file", e)
 
     def on_run_clicked(self):
         self.log_output.clear()
+        self.clear_status()
 
         try:
             self.result = process_file(
@@ -735,10 +843,25 @@ class GeospatialProcessingWindow(QMainWindow):
                 self.log("\nNo duplicate Level1/Level2/Level3 combinations found.")
 
             self.populate_preview_table(result["import_table"].head(200))
+            self.show_success_status(
+                f"Success: processing completed. {len(result['import_table']):,} rows exported. "
+                f"ZIP created: {result['zip_path'].name}"
+            )
+
+            QMessageBox.information(
+                self,
+                "Success",
+                (
+                    "Processing completed successfully.\n\n"
+                    f"Rows processed: {len(result['import_table']):,}\n"
+                    f"ZIP created: {result['zip_path'].name}"
+                ),
+            )
 
         except Exception as e:
             self.save_zip_btn.setEnabled(False)
             self.clear_preview()
+            self.clear_status()
             self.handle_error("Processing failed", e)
 
     def on_save_zip_clicked(self):
@@ -781,8 +904,6 @@ class GeospatialProcessingWindow(QMainWindow):
                 item = QTableWidgetItem(text)
                 item.setFlags(item.flags() & ~Qt.ItemFlag.ItemIsEditable)
                 self.preview_table.setItem(row_idx, col_idx, item)
-
-        self.preview_table.resizeColumnsToContents()
 
     def clear_preview(self):
         self.preview_table.clear()

@@ -1,123 +1,123 @@
-South Africa	Hereford	_CA11		{\"type\":\"Point\",\"coordinates\":[29.4176167,-25.1682033]}
-South Africa	Hereford	_CA11		{\"type\":\"Point\",\"coordinates\":[29.4176167,-25.1682033]}
-South Africa	Hereford	_CA11		{\"type\":\"Point\",\"coordinates\":[29.4176167,-25.1682033]}
-South Africa	Hereford	_CA11		{\"type\":\"Point\",\"coordinates\":[29.4176167,-25.1682033]}
-South Africa	Hereford	_CA11		{\"type\":\"Point\",\"coordinates\":[29.4176167,-25.1682033]}
-South Africa	Hereford	_CCE7		{\"type\":\"Point\",\"coordinates\":[29.4179765,-25.1682185]}
-South Africa	Hereford	_CCE7		{\"type\":\"Point\",\"coordinates\":[29.4179765,-25.1682185]}
-South Africa	Hereford	_CCE7		{\"type\":\"Point\",\"coordinates\":[29.4179765,-25.1682185]}
-South Africa	Hereford	_CCE7		{\"type\":\"Point\",\"coordinates\":[29.4179765,-25.1682185]}
-South Africa	Hereford	_24A9		{\"type\":\"Point\",\"coordinates\":[29.4178916,-25.1682219]}
-South Africa	Hereford	_24A9		{\"type\":\"Point\",\"coordinates\":[29.4178916,-25.1682219]}
-South Africa	Hereford	_24A9		{\"type\":\"Point\",\"coordinates\":[29.4178916,-25.1682219]}
-South Africa	Hereford	_24A9		{\"type\":\"Point\",\"coordinates\":[29.4178916,-25.1682219]}
-South Africa	Hereford	_24A9		{\"type\":\"Point\",\"coordinates\":[29.4178916,-25.1682219]}
-South Africa	Hereford	_24A9		{\"type\":\"Point\",\"coordinates\":[29.4178916,-25.1682219]}
-South Africa	Hereford	_23A9		{\"type\":\"Point\",\"coordinates\":[29.4182517,-25.1683351]}
-South Africa	Hereford	_23A9		{\"type\":\"Point\",\"coordinates\":[29.4182517,-25.1683351]}
-South Africa	Hereford	_23A9		{\"type\":\"Point\",\"coordinates\":[29.4182517,-25.1683351]}
-South Africa	Hereford	_23A9		{\"type\":\"Point\",\"coordinates\":[29.4182517,-25.1683351]}
-South Africa	Hereford	_23A9		{\"type\":\"Point\",\"coordinates\":[29.4182517,-25.1683351]}
-South Africa	Hereford	_23A9		{\"type\":\"Point\",\"coordinates\":[29.4182517,-25.1683351]}
-South Africa	Hereford	_23A9		{\"type\":\"Point\",\"coordinates\":[29.4182517,-25.1683351]}
-South Africa	Hereford	_5ACF		{\"type\":\"Point\",\"coordinates\":[29.4179032,-25.1681767]}
-South Africa	Hereford	_5ACF		{\"type\":\"Point\",\"coordinates\":[29.4179032,-25.1681767]}
-South Africa	Hereford	_5ACF		{\"type\":\"Point\",\"coordinates\":[29.4179032,-25.1681767]}
-South Africa	Hereford	_5ACF		{\"type\":\"Point\",\"coordinates\":[29.4179032,-25.1681767]}
-South Africa	Hereford	_5ACF		{\"type\":\"Point\",\"coordinates\":[29.4179032,-25.1681767]}
-South Africa	Hereford	_5ACF		{\"type\":\"Point\",\"coordinates\":[29.4179032,-25.1681767]}
-South Africa	Hereford	_5ACF		{\"type\":\"Point\",\"coordinates\":[29.4179032,-25.1681767]}
-South Africa	Hereford	_7AD6		{\"type\":\"Point\",\"coordinates\":[29.4182716,-25.1683183]}
-South Africa	Hereford	_7AD6		{\"type\":\"Point\",\"coordinates\":[29.4182716,-25.1683183]}
-South Africa	Hereford	_7AD6		{\"type\":\"Point\",\"coordinates\":[29.4182716,-25.1683183]}
-South Africa	Hereford	_7AD6		{\"type\":\"Point\",\"coordinates\":[29.4182716,-25.1683183]}
-South Africa	Hereford	_7AD6		{\"type\":\"Point\",\"coordinates\":[29.4182716,-25.1683183]}
-South Africa	Hereford	_7AD6		{\"type\":\"Point\",\"coordinates\":[29.4182716,-25.1683183]}
-South Africa	Hereford	_7AD6		{\"type\":\"Point\",\"coordinates\":[29.4182716,-25.1683183]}
-South Africa	Hereford	_8121		{\"type\":\"Point\",\"coordinates\":[29.4179883,-25.1682283]}
-South Africa	Hereford	_8121		{\"type\":\"Point\",\"coordinates\":[29.4179883,-25.1682283]}
-South Africa	Hereford	_8121		{\"type\":\"Point\",\"coordinates\":[29.4179883,-25.1682283]}
-South Africa	Hereford	_8121		{\"type\":\"Point\",\"coordinates\":[29.4179883,-25.1682283]}
-South Africa	Hereford	_8121		{\"type\":\"Point\",\"coordinates\":[29.4179883,-25.1682283]}
-South Africa	Hereford	_8121		{\"type\":\"Point\",\"coordinates\":[29.4179883,-25.1682283]}
-South Africa	Hereford	_8121		{\"type\":\"Point\",\"coordinates\":[29.4179883,-25.1682283]}
-South Africa	Hereford	_8121		{\"type\":\"Point\",\"coordinates\":[29.4179883,-25.1682283]}
-South Africa	Hereford	_2C27		{\"type\":\"Point\",\"coordinates\":[29.4180538,-25.1684023]}
-South Africa	Hereford	_2C27		{\"type\":\"Point\",\"coordinates\":[29.4180538,-25.1684023]}
-South Africa	Hereford	_2C27		{\"type\":\"Point\",\"coordinates\":[29.4180538,-25.1684023]}
-South Africa	Hereford	_2C27		{\"type\":\"Point\",\"coordinates\":[29.4180538,-25.1684023]}
-South Africa	Hereford	_2C27		{\"type\":\"Point\",\"coordinates\":[29.4180538,-25.1684023]}
-South Africa	Hereford	_2C27		{\"type\":\"Point\",\"coordinates\":[29.4180538,-25.1684023]}
-South Africa	Hereford	_BEDA		{\"type\":\"Point\",\"coordinates\":[29.4177817,-25.1680488]}
-South Africa	Hereford	_BEDA		{\"type\":\"Point\",\"coordinates\":[29.4177817,-25.1680488]}
-South Africa	Hereford	_BEDA		{\"type\":\"Point\",\"coordinates\":[29.4177817,-25.1680488]}
-South Africa	Hereford	_BEDA		{\"type\":\"Point\",\"coordinates\":[29.4177817,-25.1680488]}
-South Africa	Hereford	_BEDA		{\"type\":\"Point\",\"coordinates\":[29.4177817,-25.1680488]}
-South Africa	Hereford	_BEDA		{\"type\":\"Point\",\"coordinates\":[29.4177817,-25.1680488]}
-South Africa	Hereford	_D86B		{\"type\":\"Point\",\"coordinates\":[29.4174856,-25.1682852]}
-South Africa	Hereford	_D86B		{\"type\":\"Point\",\"coordinates\":[29.4174856,-25.1682852]}
-South Africa	Hereford	_D86B		{\"type\":\"Point\",\"coordinates\":[29.4174856,-25.1682852]}
-South Africa	Hereford	_D86B		{\"type\":\"Point\",\"coordinates\":[29.4174856,-25.1682852]}
-South Africa	Hereford	_D86B		{\"type\":\"Point\",\"coordinates\":[29.4174856,-25.1682852]}
-South Africa	Hereford	_D86B		{\"type\":\"Point\",\"coordinates\":[29.4174856,-25.1682852]}
-South Africa	Hereford	_FDFD		{\"type\":\"Point\",\"coordinates\":[29.417485,-25.1680867]}
-South Africa	Hereford	_FDFD		{\"type\":\"Point\",\"coordinates\":[29.417485,-25.1680867]}
-South Africa	Hereford	_FDFD		{\"type\":\"Point\",\"coordinates\":[29.417485,-25.1680867]}
-South Africa	Hereford	_FDFD		{\"type\":\"Point\",\"coordinates\":[29.417485,-25.1680867]}
-South Africa	Hereford	_FDFD		{\"type\":\"Point\",\"coordinates\":[29.417485,-25.1680867]}
-South Africa	Hereford	_FDFD		{\"type\":\"Point\",\"coordinates\":[29.417485,-25.1680867]}
-South Africa	Hereford	_FDFD		{\"type\":\"Point\",\"coordinates\":[29.417485,-25.1680867]}
-South Africa	Hereford	_229E		{\"type\":\"Point\",\"coordinates\":[29.4180382,-25.1682811]}
-South Africa	Hereford	_229E		{\"type\":\"Point\",\"coordinates\":[29.4180382,-25.1682811]}
-South Africa	Hereford	_229E		{\"type\":\"Point\",\"coordinates\":[29.4180382,-25.1682811]}
-South Africa	Hereford	_229E		{\"type\":\"Point\",\"coordinates\":[29.4180382,-25.1682811]}
-South Africa	Hereford	_229E		{\"type\":\"Point\",\"coordinates\":[29.4180382,-25.1682811]}
-South Africa	Hereford	_229E		{\"type\":\"Point\",\"coordinates\":[29.4180382,-25.1682811]}
-South Africa	Hereford	_229E		{\"type\":\"Point\",\"coordinates\":[29.4180382,-25.1682811]}
-South Africa	Hereford	_4784		{\"type\":\"Point\",\"coordinates\":[29.4175123,-25.1683645]}
-South Africa	Hereford	_4784		{\"type\":\"Point\",\"coordinates\":[29.4175123,-25.1683645]}
-South Africa	Hereford	_4784		{\"type\":\"Point\",\"coordinates\":[29.4175123,-25.1683645]}
-South Africa	Hereford	_4784		{\"type\":\"Point\",\"coordinates\":[29.4175123,-25.1683645]}
-South Africa	Hereford	_26AE		{\"type\":\"Point\",\"coordinates\":[29.4178351,-25.1682304]}
-South Africa	Hereford	_26AE		{\"type\":\"Point\",\"coordinates\":[29.4178351,-25.1682304]}
-South Africa	Hereford	_26AE		{\"type\":\"Point\",\"coordinates\":[29.4178351,-25.1682304]}
-South Africa	Hereford	_26AE		{\"type\":\"Point\",\"coordinates\":[29.4178351,-25.1682304]}
-South Africa	Hereford	_26AE		{\"type\":\"Point\",\"coordinates\":[29.4178351,-25.1682304]}
-South Africa	Hereford	_26AE		{\"type\":\"Point\",\"coordinates\":[29.4178351,-25.1682304]}
-South Africa	Hereford	_26AE		{\"type\":\"Point\",\"coordinates\":[29.4178351,-25.1682304]}
-South Africa	Hereford	_9943		{\"type\":\"Point\",\"coordinates\":[29.4182483,-25.1681068]}
-South Africa	Hereford	_9943		{\"type\":\"Point\",\"coordinates\":[29.4182483,-25.1681068]}
-South Africa	Hereford	_9943		{\"type\":\"Point\",\"coordinates\":[29.4182483,-25.1681068]}
-South Africa	Hereford	_9943		{\"type\":\"Point\",\"coordinates\":[29.4182483,-25.1681068]}
-South Africa	Hereford	_9943		{\"type\":\"Point\",\"coordinates\":[29.4182483,-25.1681068]}
-South Africa	Hereford	_9943		{\"type\":\"Point\",\"coordinates\":[29.4182483,-25.1681068]}
-South Africa	Hereford	_9943		{\"type\":\"Point\",\"coordinates\":[29.4182483,-25.1681068]}
-South Africa	Hereford	_5DA2		{\"type\":\"Point\",\"coordinates\":[29.4182051,-25.1681884]}
-South Africa	Hereford	_5DA2		{\"type\":\"Point\",\"coordinates\":[29.4182051,-25.1681884]}
-South Africa	Hereford	_5DA2		{\"type\":\"Point\",\"coordinates\":[29.4182051,-25.1681884]}
-South Africa	Hereford	_5DA2		{\"type\":\"Point\",\"coordinates\":[29.4182051,-25.1681884]}
-South Africa	Hereford	_5DA2		{\"type\":\"Point\",\"coordinates\":[29.4182051,-25.1681884]}
-South Africa	Hereford	_5DA2		{\"type\":\"Point\",\"coordinates\":[29.4182051,-25.1681884]}
-South Africa	Hereford	_5DA2		{\"type\":\"Point\",\"coordinates\":[29.4182051,-25.1681884]}
-South Africa	Hereford	_5DA2		{\"type\":\"Point\",\"coordinates\":[29.4182051,-25.1681884]}
-South Africa	Hereford	_5051		{\"type\":\"Point\",\"coordinates\":[29.4177766,-25.1683939]}
-South Africa	Hereford	_5051		{\"type\":\"Point\",\"coordinates\":[29.4177766,-25.1683939]}
-South Africa	Hereford	_5051		{\"type\":\"Point\",\"coordinates\":[29.4177766,-25.1683939]}
-South Africa	Hereford	_5051		{\"type\":\"Point\",\"coordinates\":[29.4177766,-25.1683939]}
-South Africa	Hereford	_5051		{\"type\":\"Point\",\"coordinates\":[29.4177766,-25.1683939]}
-South Africa	Hereford	_5051		{\"type\":\"Point\",\"coordinates\":[29.4177766,-25.1683939]}
-South Africa	Hereford	_D4BC		{\"type\":\"Point\",\"coordinates\":[29.4162917,-25.1668583]}
-South Africa	Hereford	_D4BC		{\"type\":\"Point\",\"coordinates\":[29.4162917,-25.1668583]}
-South Africa	Hereford	_D4BC		{\"type\":\"Point\",\"coordinates\":[29.4162917,-25.1668583]}
-South Africa	Hereford	_D4BC		{\"type\":\"Point\",\"coordinates\":[29.4162917,-25.1668583]}
-South Africa	Hereford	_855B		{\"type\":\"Point\",\"coordinates\":[29.4168617,-25.16711]}
-South Africa	Hereford	_855B		{\"type\":\"Point\",\"coordinates\":[29.4168617,-25.16711]}
-South Africa	Hereford	_855B		{\"type\":\"Point\",\"coordinates\":[29.4168617,-25.16711]}
-South Africa	Hereford	_855B		{\"type\":\"Point\",\"coordinates\":[29.4168617,-25.16711]}
-South Africa	Hereford	_855B		{\"type\":\"Point\",\"coordinates\":[29.4168617,-25.16711]}
-South Africa	Hereford	_BC18		{\"type\":\"Point\",\"coordinates\":[29.41731,-25.167355]}
-South Africa	Hereford	_BC18		{\"type\":\"Point\",\"coordinates\":[29.41731,-25.167355]}
-South Africa	Hereford	_BC18		{\"type\":\"Point\",\"coordinates\":[29.41731,-25.167355]}
-South Africa	Hereford	_BC18		{\"type\":\"Point\",\"coordinates\":[29.41731,-25.167355]}
-South Africa	Hereford	_BC18		{\"type\":\"Point\",\"coordinates\":[29.41731,-25.167355]}
-South Africa	Hereford	_BC18		{\"type\":\"Point\",\"coordinates\":[29.41731,-25.167355]}
+		1		{\"type\":\"Point\",\"coordinates\":[29.4176167,-25.1682033]}
+		2		{\"type\":\"Point\",\"coordinates\":[29.4176167,-25.1682033]}
+		3		{\"type\":\"Point\",\"coordinates\":[29.4176167,-25.1682033]}
+		4		{\"type\":\"Point\",\"coordinates\":[29.4176167,-25.1682033]}
+		5		{\"type\":\"Point\",\"coordinates\":[29.4176167,-25.1682033]}
+		6		{\"type\":\"Point\",\"coordinates\":[29.4179765,-25.1682185]}
+		7		{\"type\":\"Point\",\"coordinates\":[29.4179765,-25.1682185]}
+		8		{\"type\":\"Point\",\"coordinates\":[29.4179765,-25.1682185]}
+		9		{\"type\":\"Point\",\"coordinates\":[29.4179765,-25.1682185]}
+		10		{\"type\":\"Point\",\"coordinates\":[29.4178916,-25.1682219]}
+		11		{\"type\":\"Point\",\"coordinates\":[29.4178916,-25.1682219]}
+		12		{\"type\":\"Point\",\"coordinates\":[29.4178916,-25.1682219]}
+		13		{\"type\":\"Point\",\"coordinates\":[29.4178916,-25.1682219]}
+		14		{\"type\":\"Point\",\"coordinates\":[29.4178916,-25.1682219]}
+		15		{\"type\":\"Point\",\"coordinates\":[29.4178916,-25.1682219]}
+		16		{\"type\":\"Point\",\"coordinates\":[29.4182517,-25.1683351]}
+		17		{\"type\":\"Point\",\"coordinates\":[29.4182517,-25.1683351]}
+		18		{\"type\":\"Point\",\"coordinates\":[29.4182517,-25.1683351]}
+		19		{\"type\":\"Point\",\"coordinates\":[29.4182517,-25.1683351]}
+		20		{\"type\":\"Point\",\"coordinates\":[29.4182517,-25.1683351]}
+		21		{\"type\":\"Point\",\"coordinates\":[29.4182517,-25.1683351]}
+		22		{\"type\":\"Point\",\"coordinates\":[29.4182517,-25.1683351]}
+		23		{\"type\":\"Point\",\"coordinates\":[29.4179032,-25.1681767]}
+		24		{\"type\":\"Point\",\"coordinates\":[29.4179032,-25.1681767]}
+		25		{\"type\":\"Point\",\"coordinates\":[29.4179032,-25.1681767]}
+		26		{\"type\":\"Point\",\"coordinates\":[29.4179032,-25.1681767]}
+		27		{\"type\":\"Point\",\"coordinates\":[29.4179032,-25.1681767]}
+		28		{\"type\":\"Point\",\"coordinates\":[29.4179032,-25.1681767]}
+		29		{\"type\":\"Point\",\"coordinates\":[29.4179032,-25.1681767]}
+		30		{\"type\":\"Point\",\"coordinates\":[29.4182716,-25.1683183]}
+		31		{\"type\":\"Point\",\"coordinates\":[29.4182716,-25.1683183]}
+		32		{\"type\":\"Point\",\"coordinates\":[29.4182716,-25.1683183]}
+		33		{\"type\":\"Point\",\"coordinates\":[29.4182716,-25.1683183]}
+		34		{\"type\":\"Point\",\"coordinates\":[29.4182716,-25.1683183]}
+		35		{\"type\":\"Point\",\"coordinates\":[29.4182716,-25.1683183]}
+		36		{\"type\":\"Point\",\"coordinates\":[29.4182716,-25.1683183]}
+		37		{\"type\":\"Point\",\"coordinates\":[29.4179883,-25.1682283]}
+		38		{\"type\":\"Point\",\"coordinates\":[29.4179883,-25.1682283]}
+		39		{\"type\":\"Point\",\"coordinates\":[29.4179883,-25.1682283]}
+		40		{\"type\":\"Point\",\"coordinates\":[29.4179883,-25.1682283]}
+		41		{\"type\":\"Point\",\"coordinates\":[29.4179883,-25.1682283]}
+		42		{\"type\":\"Point\",\"coordinates\":[29.4179883,-25.1682283]}
+		43		{\"type\":\"Point\",\"coordinates\":[29.4179883,-25.1682283]}
+		44		{\"type\":\"Point\",\"coordinates\":[29.4179883,-25.1682283]}
+		45		{\"type\":\"Point\",\"coordinates\":[29.4180538,-25.1684023]}
+		46		{\"type\":\"Point\",\"coordinates\":[29.4180538,-25.1684023]}
+		47		{\"type\":\"Point\",\"coordinates\":[29.4180538,-25.1684023]}
+		48		{\"type\":\"Point\",\"coordinates\":[29.4180538,-25.1684023]}
+		49		{\"type\":\"Point\",\"coordinates\":[29.4180538,-25.1684023]}
+		50		{\"type\":\"Point\",\"coordinates\":[29.4180538,-25.1684023]}
+		51		{\"type\":\"Point\",\"coordinates\":[29.4177817,-25.1680488]}
+		52		{\"type\":\"Point\",\"coordinates\":[29.4177817,-25.1680488]}
+		53		{\"type\":\"Point\",\"coordinates\":[29.4177817,-25.1680488]}
+		54		{\"type\":\"Point\",\"coordinates\":[29.4177817,-25.1680488]}
+		55		{\"type\":\"Point\",\"coordinates\":[29.4177817,-25.1680488]}
+		56		{\"type\":\"Point\",\"coordinates\":[29.4177817,-25.1680488]}
+		57		{\"type\":\"Point\",\"coordinates\":[29.4174856,-25.1682852]}
+		58		{\"type\":\"Point\",\"coordinates\":[29.4174856,-25.1682852]}
+		59		{\"type\":\"Point\",\"coordinates\":[29.4174856,-25.1682852]}
+		60		{\"type\":\"Point\",\"coordinates\":[29.4174856,-25.1682852]}
+		61		{\"type\":\"Point\",\"coordinates\":[29.4174856,-25.1682852]}
+		62		{\"type\":\"Point\",\"coordinates\":[29.4174856,-25.1682852]}
+		63		{\"type\":\"Point\",\"coordinates\":[29.417485,-25.1680867]}
+		64		{\"type\":\"Point\",\"coordinates\":[29.417485,-25.1680867]}
+		65		{\"type\":\"Point\",\"coordinates\":[29.417485,-25.1680867]}
+		66		{\"type\":\"Point\",\"coordinates\":[29.417485,-25.1680867]}
+		67		{\"type\":\"Point\",\"coordinates\":[29.417485,-25.1680867]}
+		68		{\"type\":\"Point\",\"coordinates\":[29.417485,-25.1680867]}
+		69		{\"type\":\"Point\",\"coordinates\":[29.417485,-25.1680867]}
+		70		{\"type\":\"Point\",\"coordinates\":[29.4180382,-25.1682811]}
+		71		{\"type\":\"Point\",\"coordinates\":[29.4180382,-25.1682811]}
+		72		{\"type\":\"Point\",\"coordinates\":[29.4180382,-25.1682811]}
+		73		{\"type\":\"Point\",\"coordinates\":[29.4180382,-25.1682811]}
+		74		{\"type\":\"Point\",\"coordinates\":[29.4180382,-25.1682811]}
+		75		{\"type\":\"Point\",\"coordinates\":[29.4180382,-25.1682811]}
+		76		{\"type\":\"Point\",\"coordinates\":[29.4180382,-25.1682811]}
+		77		{\"type\":\"Point\",\"coordinates\":[29.4175123,-25.1683645]}
+		78		{\"type\":\"Point\",\"coordinates\":[29.4175123,-25.1683645]}
+		79		{\"type\":\"Point\",\"coordinates\":[29.4175123,-25.1683645]}
+		80		{\"type\":\"Point\",\"coordinates\":[29.4175123,-25.1683645]}
+		81		{\"type\":\"Point\",\"coordinates\":[29.4178351,-25.1682304]}
+		82		{\"type\":\"Point\",\"coordinates\":[29.4178351,-25.1682304]}
+		83		{\"type\":\"Point\",\"coordinates\":[29.4178351,-25.1682304]}
+		84		{\"type\":\"Point\",\"coordinates\":[29.4178351,-25.1682304]}
+		85		{\"type\":\"Point\",\"coordinates\":[29.4178351,-25.1682304]}
+		86		{\"type\":\"Point\",\"coordinates\":[29.4178351,-25.1682304]}
+		87		{\"type\":\"Point\",\"coordinates\":[29.4178351,-25.1682304]}
+		88		{\"type\":\"Point\",\"coordinates\":[29.4182483,-25.1681068]}
+		89		{\"type\":\"Point\",\"coordinates\":[29.4182483,-25.1681068]}
+		90		{\"type\":\"Point\",\"coordinates\":[29.4182483,-25.1681068]}
+		91		{\"type\":\"Point\",\"coordinates\":[29.4182483,-25.1681068]}
+		92		{\"type\":\"Point\",\"coordinates\":[29.4182483,-25.1681068]}
+		93		{\"type\":\"Point\",\"coordinates\":[29.4182483,-25.1681068]}
+		94		{\"type\":\"Point\",\"coordinates\":[29.4182483,-25.1681068]}
+		95		{\"type\":\"Point\",\"coordinates\":[29.4182051,-25.1681884]}
+		96		{\"type\":\"Point\",\"coordinates\":[29.4182051,-25.1681884]}
+		97		{\"type\":\"Point\",\"coordinates\":[29.4182051,-25.1681884]}
+		98		{\"type\":\"Point\",\"coordinates\":[29.4182051,-25.1681884]}
+		99		{\"type\":\"Point\",\"coordinates\":[29.4182051,-25.1681884]}
+		100		{\"type\":\"Point\",\"coordinates\":[29.4182051,-25.1681884]}
+		101		{\"type\":\"Point\",\"coordinates\":[29.4182051,-25.1681884]}
+		102		{\"type\":\"Point\",\"coordinates\":[29.4182051,-25.1681884]}
+		103		{\"type\":\"Point\",\"coordinates\":[29.4177766,-25.1683939]}
+		104		{\"type\":\"Point\",\"coordinates\":[29.4177766,-25.1683939]}
+		105		{\"type\":\"Point\",\"coordinates\":[29.4177766,-25.1683939]}
+		106		{\"type\":\"Point\",\"coordinates\":[29.4177766,-25.1683939]}
+		107		{\"type\":\"Point\",\"coordinates\":[29.4177766,-25.1683939]}
+		108		{\"type\":\"Point\",\"coordinates\":[29.4177766,-25.1683939]}
+		109		{\"type\":\"Point\",\"coordinates\":[29.4162917,-25.1668583]}
+		110		{\"type\":\"Point\",\"coordinates\":[29.4162917,-25.1668583]}
+		111		{\"type\":\"Point\",\"coordinates\":[29.4162917,-25.1668583]}
+		112		{\"type\":\"Point\",\"coordinates\":[29.4162917,-25.1668583]}
+		113		{\"type\":\"Point\",\"coordinates\":[29.4168617,-25.16711]}
+		114		{\"type\":\"Point\",\"coordinates\":[29.4168617,-25.16711]}
+		115		{\"type\":\"Point\",\"coordinates\":[29.4168617,-25.16711]}
+		116		{\"type\":\"Point\",\"coordinates\":[29.4168617,-25.16711]}
+		117		{\"type\":\"Point\",\"coordinates\":[29.4168617,-25.16711]}
+		118		{\"type\":\"Point\",\"coordinates\":[29.41731,-25.167355]}
+		119		{\"type\":\"Point\",\"coordinates\":[29.41731,-25.167355]}
+		120		{\"type\":\"Point\",\"coordinates\":[29.41731,-25.167355]}
+		121		{\"type\":\"Point\",\"coordinates\":[29.41731,-25.167355]}
+		122		{\"type\":\"Point\",\"coordinates\":[29.41731,-25.167355]}
+		123		{\"type\":\"Point\",\"coordinates\":[29.41731,-25.167355]}

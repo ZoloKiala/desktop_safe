@@ -1,0 +1,1 @@
+3	5fa7b6aa-d339-44e7-b0e3-5eedcc2eea47	Soil moisture	-	-			South Africa	Irrigation scheme - Herefored	123	Soil moisture	%	Maize Plot 15	_BC18	13.96555067660637	910.4	-25.167355	Sensor bc18	29.41731	Maize_plot15	4.8		Maize plot 15	123	{\"type\":\"Point\",\"coordinates\":[29.41731,-25.167355]}	

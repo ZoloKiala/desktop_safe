@@ -1,1 +1,1 @@
-		123		{\"type\":\"Point\",\"coordinates\":[29.41731,-25.167355]}
+South Africa	Irrigation	123	2025-10-21		{\"type\":\"Point\",\"coordinates\":[29.41731,-25.167355]}	Maize Plot 15	_BC18	21/10/2025	13.96555067660637	910.4	-25.167355	Sensor bc18	29.41731	Maize_plot15	4.8		Maize plot 15

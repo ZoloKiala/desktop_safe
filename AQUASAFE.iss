@@ -1,10 +1,10 @@
-[Setup]
+﻿[Setup]
 AppName=AQUASAFE
-AppVersion=1.0.1
+AppVersion=1.0.3
 DefaultDirName={autopf}\AQUASAFE
 DefaultGroupName=AQUASAFE
 OutputDir=installer_output
-OutputBaseFilename=AQUASAFE_Setup_1.0.1
+OutputBaseFilename=AQUASAFE_Setup_1.0.3
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern

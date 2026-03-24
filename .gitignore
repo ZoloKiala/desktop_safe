@@ -25,4 +25,5 @@ installer_output/
 Thumbs.db
 
 # Logs
-*.log
+*.logsecrets*.toml
+secrets*.json

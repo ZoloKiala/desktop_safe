@@ -1,4 +1,4 @@
-import pandas as pd
+﻿import pandas as pd
 import geopandas as gpd
 from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import (
@@ -412,6 +412,7 @@ class EditorMixin:
                 item.setFlags(item.flags() & ~Qt.ItemFlag.ItemIsEditable)
                 self.preview_table.setItem(row_idx, col_idx, item)
 
+        self.preview_table.resizeColumnsToContents()
     def clear_preview(self):
         self.preview_table.clear()
         self.preview_table.setRowCount(0)

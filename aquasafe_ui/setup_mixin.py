@@ -389,7 +389,7 @@ class WindowSetupMixin:
         self.preview_table.setMinimumHeight(260)
         self.preview_table.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         self.preview_table.verticalHeader().setVisible(False)
-        self.preview_table.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
+        self.preview_table.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Interactive)
         self.preview_table.horizontalHeader().setStretchLastSection(True)
 
         output_layout.addWidget(log_title)
